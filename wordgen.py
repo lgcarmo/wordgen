@@ -9,25 +9,51 @@ import itertools
 
 parser = argparse.ArgumentParser(description='Requests.')
 parser.add_argument('-w', dest='k_vetor', help='lista dado:dados:senhas', required=True)
-parser.add_argument('-n', dest='k_rep', help='numero de repeat -n x', required=True)
-parser.add_argument('-l', dest='k_low', help='lista com Lowercase -l lower (no required)', required=False)
-parser.add_argument('-c', dest='k_num', help='randomiza numeros', required=False)
+parser.add_argument('-m', dest='k_min', help='minum 0', required=True)
+parser.add_argument('-M', dest='k_max', help='Max X', required=True)
 
 
 
 
 args = parser.parse_args()
 
-n =(int(args.k_rep))
+n =(int(args.k_min))
+m =(int(args.k_max))
 
 chrs =(args.k_vetor).split(':')
 
+while n <= m:
+	n+=1
+	for xz in itertools.product(chrs, repeat=n):
+		print('').join(xz)
+	#	print(args.k_num)
 
-for xz in itertools.product(chrs, repeat=n):
-	print('').join(xz)
-	print(args.k_num)
+	#!/usr/bin/python
 
-	if args.k_low == 'lower':
-		print('').join(xz).capitalize
+import argparse
+import sys
+import random
+from random import randrange
+import itertools
 
-	
+
+parser = argparse.ArgumentParser(description='Requests.')
+parser.add_argument('-w', dest='k_vetor', help='lista dado:dados:senhas', required=True)
+parser.add_argument('-m', dest='k_min', help='minum 0', required=True)
+parser.add_argument('-M', dest='k_max', help='Max X', required=True)
+
+
+
+
+args = parser.parse_args()
+
+n =(int(args.k_min))
+m =(int(args.k_max))
+
+chrs =(args.k_vetor).split(':')
+
+while n <= m:
+	n+=1
+	for xz in itertools.product(chrs, repeat=n):
+		print('').join(xz)
+	#	print(args.k_num)
