@@ -17,7 +17,7 @@ WORDGEN v.3.0.0
 -M 2
 
 # -c : recebe o valor upper case.
--c upper
+-c upper | upleet
 
 # -l : Leet Mode substituição de caracters Aa>4 Ee>3 etc.
 -l
