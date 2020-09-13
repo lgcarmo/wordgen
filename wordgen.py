@@ -16,8 +16,8 @@ parser=argparse.ArgumentParser (description='Requests.')
 parser.add_argument ('-w', dest='k_vetor', help='lista dado:dados:senhas', required=True)
 parser.add_argument ('-m', dest='k_min', help='minum 0', default=0, required=False)
 parser.add_argument ('-M', dest='k_max', help='Max X', default=2, required=False)
-parser.add_argument ('-c', dest='k_cap', help='Captalize', required=False)
-parser.add_argument ('-l', '--leet', help='parameter -l leet', dest='k_leet', action='store_true', required=False)
+parser.add_argument ('-c', dest='k_cap', help='Module: upper | upleet', required=False)
+parser.add_argument ('-l', '--leet', help='leet: a:4 e:3 t:7', dest='k_leet', action='store_true', required=False)
 parser.add_argument ('-o', '--output', type=argparse.FileType(mode='w'), dest='k_output', help='Salva a wordlist em um arquivo.')
 
 args=parser.parse_args ()
@@ -42,8 +42,14 @@ while n <= m:
                 upperlist=('').join (xz).capitalize()
                 args.k_output.write(upperlist + '\n')
             else:
+                print('').join(xz).capitalize()
+        elif args.k_cap == 'upleet':
+            upperlist = ('').join(xz).capitalize()
+            t = Leet(upperlist)
+            print(t.translate())
 
-                print('').join (xz).capitalize()
+
+
 
     for xz in itertools.product (chrs, repeat=n):
         if args.k_leet:
