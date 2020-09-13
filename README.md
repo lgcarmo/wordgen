@@ -1,4 +1,4 @@
-WORDGEN v.3.0.0
+WORDGEN v.3.0.1
 
 #lgcarmo@protonmail.com
 
