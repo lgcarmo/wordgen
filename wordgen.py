@@ -20,33 +20,50 @@ parser.add_argument ('-c', dest='k_cap', help='Module: upper | upleet', required
 parser.add_argument ('-l', '--leet', help='leet: a:4 e:3 t:7', dest='k_leet', action='store_true', required=False)
 parser.add_argument ('-o', '--output', type=argparse.FileType(mode='w'), dest='k_output', help='Salva a wordlist em um arquivo.')
 
-args=parser.parse_args ()
+args=parser.parse_args()
 
-n=(int (args.k_min))
-m=(int (args.k_max))
+n=(int(args.k_min))
+m=(int(args.k_max))
 
-chrs=(args.k_vetor).split (':')
+chrs=(args.k_vetor).split(':')
 
 while n <= m:
     n+=1
-    for xz in itertools.product (chrs, repeat=n):
+    for xz in itertools.product(chrs, repeat=n):
         if args.k_output is not None:
-            list= ('').join (xz)
+            list= ('').join(xz)
             args.k_output.write(list + '\n')
         else:
-            print ('').join(xz)
+            #pass
+            s = u"%s" % ('').join(xz)
+            if s.isnumeric():
+                pass
+            else:
+                print(s)
 
-    for xz in itertools.product (chrs, repeat=n):
+    for xz in itertools.product(chrs, repeat=n):
         if args.k_cap == 'upper':
             if args.k_output is not None:
                 upperlist=('').join (xz).capitalize()
                 args.k_output.write(upperlist + '\n')
             else:
-                print('').join(xz).capitalize()
+                #print('').join(xz).capitalize()
+                # pass
+                s=u"%s" % ('').join(xz).capitalize()
+                if s.isnumeric():
+                    pass
+                else:
+                    print(s)
         elif args.k_cap == 'upleet':
             upperlist = ('').join(xz).capitalize()
             t = Leet(upperlist)
-            print(t.translate())
+            #print(t.translate())
+            s=u"%s" % t.translate()
+            if s.isnumeric():
+                pass
+            else:
+                print(s)
+
 
 
 
@@ -54,16 +71,25 @@ while n <= m:
     for xz in itertools.product (chrs, repeat=n):
         if args.k_leet:
             if args.k_output is not None:
-                leet=('').join (xz)
-                t=Leet (leet)
-                tra = []
+                leet=('').join(xz)
+                t=Leet(leet)
+                tra=[]
                 tra.append(t.translate())
                 for trans in tra:
-                    args.k_output.write(trans + '\n')
+                    s=u"%s" % trans
+                    if s.isnumeric():
+                        pass
+                    else:
+                      args.k_output.write(trans + '\n')
 
             else:
                 leet=('').join (xz)
-                t=Leet (leet)
-                print(t.translate())
-
-
+                t=Leet(leet)
+                tra=[]
+                tra.append(t.translate())
+                for trans in tra:
+                      s = u"%s" % trans
+                      if s.isnumeric():
+                          pass
+                      else:
+                          print(trans)
