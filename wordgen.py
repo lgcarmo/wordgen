@@ -5,6 +5,7 @@ from random import randrange
 import itertools
 from pyleet import Leet
 
+
 ################################
 #K40S
 #lgcarmo@protonmail.com
