@@ -7,11 +7,7 @@ Wordgen é um programa pensando para trabalhar com variações simples de palavr
 
 Exemplo de Uso:
 
-  * python ModerAuthBypass.py --module check -e demo@email.com -p password
-  
-  * python ModerAuthBypass.py --module brute -e demo@email.com -m0 -M2 -w key1:key2:key3
-  
-  * python ModerAuthBypass.py --module wordlist -e demo@email.com -f wordlist.txt
+  * python wordgen.py -m0 -M2 -w palavra1:palavra2:palavra3 -c upleet
 
 _________________________________________________________________________
 
