@@ -1,7 +1,5 @@
 # WORDGEN v.3.0.1
 
-#lgcarmo@protonmail.com
-
 
 Wordgen é um programa pensando para trabalhar com variações simples de palavras gerando uma wordlist.
 
