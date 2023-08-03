@@ -25,4 +25,4 @@ _________________________________________________________________________
 
 * -l : Leet Mode substituição de caracters Aa>4 Ee>3 etc.
 
-* o : Output File (-o output.txt)
+* -o : Output File (-o output.txt)
