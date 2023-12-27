@@ -1,15 +1,14 @@
 # WORDGEN v.3.0.1
 
 
-Wordgen é um programa pensando para trabalhar com variações simples de palavras gerando uma wordlist.
+- [x]  Wordgen é um programa pensando para trabalhar com variações simples de palavras gerando uma wordlist.
 
 Exemplo de Uso:
 
-  * python wordgen.py -m0 -M2 -w palavra1:palavra2:palavra3 -c upleet
-
-_________________________________________________________________________
-
-# HELP:
+```bash
+  $ python wordgen.py -m0 -M2 -w palavra1:palavra2:palavra3 -c upleet
+  ```
+## Principais opções:
 
 * -h : help apresneta ajuda sobre como execultar o programa
 
