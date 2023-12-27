@@ -10,16 +10,16 @@ Exemplo de Uso:
   ```
 ## Principais opções:
 
-* -h : help apresneta ajuda sobre como execultar o programa
+* `-h` : help apresneta ajuda sobre como execultar o programa
 
-* -w : recebe parametros para gerar lista (-w pass:senha:palavras)
+* `-w` : recebe parametros para gerar lista (-w pass:senha:palavras)
 
-* -m : recebe quantidade minima para embaralhar default=0
+* `-m` : recebe quantidade minima para embaralhar default=0
 
-* -M : recebe quantidade maxima para embaralhar default=2
+* `-M` : recebe quantidade maxima para embaralhar default=2
 
-* -c : recebe o valor upper case. (-c upper | upleet)
+* `-c` : recebe o valor upper case. (-c upper | upleet)
 
-* -l : Leet Mode substituição de caracters Aa>4 Ee>3 etc.
+* `-l` : Leet Mode substituição de caracters Aa>4 Ee>3 etc.
 
-* -o : Output File (-o output.txt)
+* `-o` : Output File (-o output.txt)
